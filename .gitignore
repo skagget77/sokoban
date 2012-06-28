@@ -1,1 +1,2 @@
-
+# Ignore compiled lua files.
+*.luac
