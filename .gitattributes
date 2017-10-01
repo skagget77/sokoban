@@ -1,6 +1,0 @@
-# Default behaviour. Normalized in repository and converted to native line
-# endings on checkout.
-* text
-
-# Lua source files. Normalized in repository and converted to LF on checkout.
-*.lua text eol=lf

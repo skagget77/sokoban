@@ -1,2 +1,6 @@
-# Ignore compiled lua files.
-*.luac
+build/
+node_modules/
+public/css/
+public/js/
+public/index.html
+public/index.min.html
