@@ -18,3 +18,22 @@
  * along with Sokoban.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
+
+window.PIXI   = require('phaser-ce/build/custom/pixi');
+window.p2     = require('phaser-ce/build/custom/p2');
+window.Phaser = require('phaser-ce/build/custom/phaser-split');
+
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
+    preload: preload, create: create, update: update
+});
+
+function preload() {
+    game.load.spritesheet('dude', 'img/sprites.png', 40, 40);
+}
+
+function create() {
+    game.add.sprite(0, 0, 'dude');
+}
+
+function update() {
+}

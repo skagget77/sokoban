@@ -23,6 +23,5 @@ var expect = require('chai').expect;
 
 describe('Sokoban', () => {
     it('is the best?', () => {
-	expect(true).to.be.true;
     });
 });
