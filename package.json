@@ -2,7 +2,6 @@
   "name": "sokoban",
   "version": "1.0.0",
   "description": "A web version of the classic Sokoban puzzle game.",
-  "main": "public/index.js",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
