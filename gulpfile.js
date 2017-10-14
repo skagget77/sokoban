@@ -21,7 +21,6 @@
 
 var gulp       = require('gulp');
 var autoPrefix = require('gulp-autoprefixer')
-var babel      = require('gulp-babel');
 var browserify = require('gulp-browserify');
 var cleanCss   = require('gulp-clean-css');
 var htmlMin    = require('gulp-htmlmin');
@@ -48,8 +47,7 @@ gulp.task('js-lint-test', () => {
 
 gulp.task('js-transpile', ['js-lint'], () => {
     return gulp.src('client/index.js')
-    	.pipe(babel({ presets: ['env'] }))
-        .pipe(browserify({ insertGlobals: true }))
+        .pipe(browserify({ insertGlobals: true, transform: ['babelify'] }))
         .pipe(rename('sokoban.js'))
         .pipe(gulp.dest('build'))
         .pipe(gulp.dest('public/js'));
@@ -57,8 +55,7 @@ gulp.task('js-transpile', ['js-lint'], () => {
 
 gulp.task('js-transpile-test', ['js-lint-test'], () => {
     return gulp.src('test/client/index.js')
-	.pipe(babel({ presets: ['env'] }))
-        .pipe(browserify({ insertGlobals: true }))
+	.pipe(browserify({ insertGlobals: true, transform: ['babelify'] }))
         .pipe(rename('sokoban-test.js'))
         .pipe(gulp.dest('build'));
 });
